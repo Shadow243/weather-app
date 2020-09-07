@@ -6,9 +6,17 @@ const api = {
 const searchbox = document.querySelector('.js-user-search');
 searchbox.addEventListener('keypress', setQuery);
 
+const mobileSearchbox = document.querySelector('.js-mobile-user-search');
+mobileSearchbox.addEventListener('keypress', setQuery);
+
+
 function setQuery(evt) {
-  if (evt.keyCode == 13) {
-    getResults(searchbox.value);
+  let val = searchbox.value
+  if (val.length == 0) {
+    val = mobileSearchbox.value
+  }
+  if (evt.keyCode == 13) {//if is enter key pressed
+    getResults(val);
   }
 }
 
@@ -24,7 +32,13 @@ function getResults(query) {
 }
 
 function displayResults(weather) {
-  toastr.info(`Result find for ${weather.name}`)
+  if (weather.cod === "404") {
+    toastr.error(`No result find for your search`)
+
+  }
+  // else if (weather.cod === "200") {
+  //   toastr.success(`Result find for ${weather.name}`)
+  // }
 
   let city = document.querySelector('.date-and-place .place');
   city.innerText = `${weather.name}, ${weather.sys.country}`;
