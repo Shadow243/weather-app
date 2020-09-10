@@ -1,0 +1,572 @@
+@charset "UTF-8";
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .812rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #888da8;
+    background-color: #edf2f6;
+}
+.ptr {
+	padding: 10px 0px;
+}
+
+.pl-10{
+  padding-left: 10px !important;
+}
+.pl-5{
+  padding-left: 5px !important;
+}
+.pr-10{
+  padding-right: 10px !important;
+}
+.pr-5{
+  padding-right: 5px !important;
+}
+.m-auto {
+    margin: auto!important;
+}
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto, .col-xxl, .col-xxl-1, .col-xxl-10, .col-xxl-11, .col-xxl-12, .col-xxl-2, .col-xxl-3, .col-xxl-4, .col-xxl-5, .col-xxl-6, .col-xxl-7, .col-xxl-8, .col-xxl-9, .col-xxl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.header {
+  height: 70px;
+  background-color: #3f4257;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 21; }
+  .header .page-title {
+    padding: 26px 50px 26px 100px;
+    text-transform: uppercase;
+    float: left;
+    height: 100%;
+    min-width: 170px; }
+    .header .page-title > * {
+      color: #fff;
+      margin: 0; }
+
+
+.header-content-wrapper {
+  height: 100%; }
+
+.header-spacer {
+  display: block;
+  height: 110px; }
+
+.header-spacer-small {
+  height: 50px; }
+
+.search-bar {
+  float: left;
+  width: 500px;
+  height: 70px;
+  background-color: #494c62;
+  position: relative; }
+  .search-bar.w-search {
+    width: 500px;
+    min-height: 70px;
+    background-color: #494c62; }
+  .search-bar .form-group {
+    margin-bottom: 0;
+    height: 70px; }
+  .search-bar .form-control {
+    border: none;
+    padding: 0; }
+  
+  .search-bar .form-group.with-button button {
+    color: #696d87;
+    fill: #696d87;
+    background-color: #494c62;
+    width: 50px; }
+    .search-bar .form-group.with-button button svg {
+      height: 22px;
+      width: 22px; }
+  .search-bar .form-group.with-button input {
+    height: 100%;
+    border: none;
+    color: #9a9fbf; }
+
+.header-responsive {
+  display: none; }
+  .header-responsive .header-content-wrapper {
+    z-index: 5; }
+
+
+  .bg-weather {
+    background-image: url(/assets/img/top-header6.png);
+}
+
+.content-bg-wrap {
+    background-position: 0 0;
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-animation: slide 50s linear infinite;
+    animation: slide 50s linear infinite;
+    will-change: background-position;
+    background-size: auto;
+}
+
+/*------------- Responsive mode styles --------------*/
+@media (max-width: 1350px) {
+  .search-bar.w-search {
+    max-width: 300px; } }
+
+
+@media (max-width: 1080px) {
+  .control-icon .more-dropdown {
+    width: 320px;
+    right: -140px; }
+  .control-icon .notification-list .notification-icon {
+    float: none;
+    margin-top: 10px; }
+  .control-icon .notification-list.friend-requests .accepted .notification-icon {
+    float: right; }
+  .header .page-title {
+    display: none; }
+  .page-has-left-panels .header {
+    padding-left: 70px; }
+  .header.header--logout {
+    padding-left: 0; }
+  .header-content-wrapper {
+    display: flex;
+    justify-content: space-between; } }
+
+@media (max-width: 1024px) {
+  .control-icon {
+    margin-right: 20px; }
+  .author-page {
+    margin-left: 10px; }
+  .header--standard > .container {
+    width: 100%;
+    max-width: unset; }
+  .header-menu a {
+    padding: 30px 10px; } }
+
+@media (max-width: 960px) {
+  .header--standard-wrap {
+    flex-direction: column; }
+  .header--standard .logo {
+    margin-top: 10px; }
+  .header--standard {
+    padding: 10px 0; }
+    .header--standard .header-menu {
+      margin-left: 0; } }
+
+
+@media (max-width: 768px) {
+  .header {
+    height: 50px; }
+  .header-spacer {
+    height: 50px; }
+  .search-bar.w-search {
+    max-width: 100%; }
+ 
+  .search-bar.w-search {
+    min-height: 50px; }
+  .search-bar .form-group {
+    height: 50px; }
+  .search-bar .selectize-control {
+    height: 50px; }
+  .search-bar .selectize-input {
+    height: 50px; }
+  .search-bar {
+    height: 50px; } }
+
+@media (max-width: 570px) {
+  .top-header.top-header-favorit .top-header-author {
+    left: 20px; } }
+
+@media (max-width: 460px) {
+  .tab-content-responsive .notification-list .notification-event {
+    width: 50%; }
+  .tab-content-responsive .notification-list .selectize-dropdown .notification-event {
+    width: auto; }
+  .top-header.top-header-favorit .top-header-author {
+    bottom: auto;
+    top: 0;
+    margin-top: 5px; }
+  .top-header.top-header-favorit .top-header-author .author-thumb {
+    width: 60px;
+    height: 60px;
+    border-width: 2px; }
+  .top-header.top-header-favorit .author-content {
+    margin-top: 0; }
+  .top-header.top-header-favorit .profile-menu {
+    flex-direction: column; }
+    .top-header.top-header-favorit .profile-menu li {
+      margin-bottom: 10px; }
+  .control-icon .mCustomScrollbar {
+    max-height: 150px; } }
+
+@media (max-width: 420px) {
+  .top-header.top-header-favorit .author-name {
+    font-size: 18px; } }
+
+/*------------- #BOOTSTRAP-CUSTOMIZATION --------------*/
+ul {
+  list-style: none;
+  padding: 0; }
+
+a {
+  transition: all .15s ease; }
+  a:hover {
+    color: #ff5e3a; }
+
+select,
+input,
+.form-control {
+  background-color: transparent; }
+
+select, input {
+  display: block;
+  width: 100%;
+  padding: 1.1rem 1.1rem;
+  font-size: .875rem;
+  line-height: 1.25;
+  color: #464a4c;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid #e6ecf5;
+  border-radius: 0.25rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+
+p {
+  font-size: .875rem; }
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #515365; }
+
+
+
+a > svg {
+  transition: all .15s ease; }
+
+svg {
+  transition: all .3s ease;
+  vertical-align: unset; }
+
+button.btn {
+  padding: .5rem 1rem; }
+
+button.btn-md {
+  padding: 1rem 3.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.3rem; }
+
+button.btn-md-2 {
+  padding: .8rem 2.1rem;
+  font-size: 0.688rem;
+  border-radius: 0.3rem; }
+
+button.btn-lg {
+  padding: 1rem 3rem; }
+
+
+.h1, .h2, .h3, .h4, h1, h2, h3, h4 {
+  font-weight: 300; }
+
+img {
+  vertical-align: unset;
+  max-width: 100%;
+  height: auto;
+  display: inline-block; }
+
+
+/*------------- #MAIN-HEADER --------------*/
+.main-header {
+  padding: 70px 0 70px 0;
+  margin: 0 auto 30px;
+  position: relative;
+  background-position: 50% 50%; }
+  .main-header.main-header-has-header-standard {
+    padding-top: 0; }
+
+.img-bottom {
+  position: relative;
+  display: block;
+  margin: 20px auto 0;
+  margin-bottom: -70px; }
+
+
+
+.bg-weather {
+  background-image: url("../img/top-header6.png"); }
+
+.main-header-content {
+  color: #fff;
+  text-align: center; }
+  .main-header-content > * {
+    color: inherit; }
+  .main-header-content > *:first-child {
+    font-weight: 300;
+    margin-bottom: 20px; }
+  .main-header-content p {
+    font-weight: 400;
+    margin-bottom: 0; }
+
+/*------------- #OVERLAY-MENU --------------*/
+body {
+  overflow: hidden; 
+  /* overflow-x: hidden;  */
+}
+  body:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(43, 45, 59, 0.9);
+    opacity: 0;
+    transition: opacity .3s ease;
+    z-index: -999; }
+  body.overlay-enable:before {
+    opacity: .8;
+    z-index: 500; }
+  body.body--fixed {
+    position: fixed;
+    width: 100%; }
+
+/*------------- #W-WEATHER --------------*/
+.w-wethear {
+  background-image: url("../img/bg-wethear.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  background-color: #38a9ff; }
+  .w-wethear .olymp-weather-partly-sunny-icon {
+    width: 64px;
+    height: 65px; }
+  .w-wethear .weekly-forecast {
+    margin-right: -25px;
+    margin-left: -25px;
+    position: relative;
+    padding: 0 20px; }
+    .w-wethear .weekly-forecast li {
+      display: inline-block;
+      vertical-align: top;
+      padding: 15px 3px;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 700; }
+      .w-wethear .weekly-forecast li > * {
+        margin-bottom: 8px; }
+        .w-wethear .weekly-forecast li > *:last-child {
+          margin-bottom: 0; }
+      .w-wethear .weekly-forecast li svg {
+        height: 22px;
+        width: 22px; }
+      .w-wethear .weekly-forecast li .olymp-weather-partly-sunny-icon {
+        height: 22px;
+        width: 22px; }
+    .w-wethear .weekly-forecast:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      opacity: .1; }
+  .w-wethear .more {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    opacity: .8;
+    color: #fff;
+    fill: #fff; }
+  .w-wethear .temperature-sensor {
+    font-size: 60px;
+    line-height: 1; }
+  .w-wethear > * {
+    margin-bottom: 25px; }
+    .w-wethear > *:last-child {
+      margin-bottom: 0; }
+  .w-wethear .max-min-temperature {
+    margin-right: 20px; }
+    .w-wethear .max-min-temperature span {
+      display: block; }
+  .w-wethear svg {
+    fill: #fff; }
+  .w-wethear .climate {
+    font-size: 18px; }
+  .w-wethear .wethear-now {
+    margin-top: 10px; }
+  .w-wethear .wethear-now-description span {
+    font-size: 11px; }
+    .w-wethear .wethear-now-description span > span {
+      font-weight: 500; }
+    .w-wethear .wethear-now-description span + span {
+      margin-left: 15px; }
+  .w-wethear .date {
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0; }
+
+.swiper-slide-weather {
+  border-bottom: 1px solid #e6ecf5; }
+
+.day-wethear-item {
+  float: left;
+  padding: 25px 0 20px;
+  border-right: 1px solid #e6ecf5;
+  text-align: center;
+  width: 16.5%; }
+  .day-wethear-item:last-child {
+    border-right: none; }
+  .day-wethear-item .title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #515365;
+    margin-bottom: 40px; }
+  .day-wethear-item .icon {
+    fill: #38a9ff;
+    margin-bottom: 30px;
+    min-height: 54px;
+    width: 55px; }
+  .day-wethear-item .temperature-sensor {
+    font-size: 18px;
+    color: #515365;
+    margin-bottom: 10px; }
+  .day-wethear-item .wethear-now {
+    font-weight: 700; }
+    .day-wethear-item .wethear-now span {
+      font-size: 11px;
+      color: #c5c8d8; }
+      .day-wethear-item .wethear-now span + span {
+        margin-left: 12px; }
+    .day-wethear-item .wethear-now .high {
+      color: #888da8; }
+
+.wethear-content {
+  color: #fff;
+  text-align: center; }
+  .wethear-content .icon {
+    fill: #fff;
+    margin-bottom: 20px; }
+  .wethear-content .temperature-sensor {
+    font-size: 84px;
+    margin-bottom: 10px;
+    line-height: 1; }
+  .wethear-content .wethear-now {
+    margin-bottom: 15px; }
+    .wethear-content .wethear-now span {
+      font-size: 13px; }
+      .wethear-content .wethear-now span + span {
+        margin-left: 12px; }
+  .wethear-content .climate {
+    font-size: 24px;
+    margin-bottom: 15px; }
+  .wethear-content .wethear-now-description {
+    font-size: 12px; }
+    .wethear-content .wethear-now-description > * {
+      display: inline-block;
+      padding: 0 25px; }
+    .wethear-content .wethear-now-description .icon {
+      margin-bottom: 10px; }
+    .wethear-content .wethear-now-description span {
+      font-weight: 700; }
+
+.main-header-weather {
+  padding: 40px 30px 30px; }
+  .main-header-weather .img-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 0; }
+  .main-header-weather .date-and-place {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    color: #fff; }
+  .main-header-weather .date {
+    font-size: 16px; }
+  .main-header-weather .place {
+    font-size: 11px; }
+  .main-header-weather .wethear-update {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    font-size: 10px;
+    color: #fff;
+    fill: #fff; }
+    .main-header-weather .wethear-update svg {
+      margin-left: 10px;
+      width: 12px;
+      height: 13px; }
+  .main-header-weather .olymp-weather-partly-sunny-icon {
+    width: 64px;
+    height: 65px; }
+  .main-header-weather .olymp-weather-wind-icon-header {
+    width: 47px;
+    height: 34px; }
+  .main-header-weather .olymp-weather-rain-drops-icon {
+    width: 47px;
+    height: 34px; }
+  .main-header-weather .olymp-weather-thermometer-icon {
+    width: 47px;
+    height: 34px; }
+
+/*------------- Responsive mode styles --------------*/
+@media (max-width: 1400px) {
+  .w-wethear .weekly-forecast li {
+    padding: 15px 1px; } }
+
+@media (max-width: 540px) {
+  .day-wethear-item {
+    width: 33%; } }
+
+@media (max-width: 480px) {
+  .wethear-content {
+    margin-top: 100px; } }
+
+@media (max-width: 360px) {
+  .day-wethear-item {
+    width: 49%; }
+  .wethear-content .wethear-now-description > * {
+    padding: 0 5px; }
+  .main-header-weather .date-and-place {
+    position: relative;
+    top: auto;
+    left: auto;
+    text-align: center;
+    margin-bottom: 20px; }
+  .main-header-weather .wethear-update {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: center; }
+  .wethear-content {
+    margin-top: 20px; } }

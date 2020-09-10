@@ -1,0 +1,141 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WEATHER APP</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Main Styles CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/fonts.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <link rel="manifest" href="./manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="./img/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+</head>
+
+<body>
+    <!-- Header-BP -->
+
+    <header class="header" id="site-header">
+        <div class="page-title">
+            <h6>Weather</h6>
+        </div>
+
+        <div class="header-content-wrapper">
+            <div class="search-bar w-search">
+                <div class="form-group with-button">
+                    <input class="form-control js-user-search pl-10" placeholder="Search here by city" type="text">
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- ... end Header-BP -->
+
+    <header class="header header-responsive" id="site-header-responsive">
+        <div class="header-content-wrapper">
+            <div class="main-header-content ptr">
+                <h2>Weather</h2>
+
+
+            </div>
+            <div class="search-bar ">
+                <div class="form-group with-button">
+                    <input class="form-control js-mobile-user-search pl-10" placeholder="Search here by city"
+                        type="text">
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ... end Responsive Header-BP -->
+    <div class="header-spacer header-spacer-small"></div>
+
+    <div class="main-header main-header-weather" style="height: -webkit-fill-available;">
+        <div class="content-bg-wrap bg-weather" style="background-image: url(./assets/img/top-header6.png)"></div>
+
+        <div class="date-and-place">
+            <div class="date">Saturday, Sept 08th</div>
+            <div class="place">London</div>
+        </div>
+
+        <div class="wethear-update">
+            Updated: 20/10 6:32pm
+            <svg class="olymp-weather-refresh-icon">
+                <use xlink:href="#olymp-weather-refresh-icon"></use>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="m-auto col-lg-4 col-md-8 col-sm-12 col-12">
+                    <div class="wethear-content">
+                        <div class="wethear-now">
+                            <svg class="olymp-weather-partly-sunny-icon icon">
+                                <use xlink:href="#olymp-weather-partly-sunny-icon"></use>
+                            </svg>
+
+                            <div class="temperature-sensor">19°C</div>
+                            <div class="max-min-temperature hi-low">
+                                <span>Low: 18°</span>
+                                <span>High: 21°</span>
+                            </div>
+                        </div>
+
+
+                        <div class="climate current-weather">Clouds</div>
+
+                        <div class="wethear-now-description">
+                            <div>
+                                <svg class="olymp-weather-thermometer-icon icon">
+                                    <use xlink:href="#olymp-weather-thermometer-icon"></use>
+                                </svg>
+                                <div>Lat</div>
+                                <span class="lat">51.51</span>
+                            </div>
+
+                            <div>
+                                <svg class="olymp-weather-rain-drops-icon icon">
+                                    <use xlink:href="#olymp-weather-rain-drops-icon"></use>
+                                </svg>
+                                <div>Long</div>
+                                <span class="long">-0.13</span>
+                            </div>
+
+                            <div>
+                                <svg class="olymp-weather-wind-icon-header icon">
+                                    <use xlink:href="#olymp-weather-wind-icon-header"></use>
+                                </svg>
+                                <div>Wind Speed</div>
+                                <span class="wind-speed">5.1</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img class="img-bottom" src="./assets/img/weather-bottom.png" alt="friends">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		
+	<!-- Alert toastr-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- Service worker here -->
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
